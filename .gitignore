@@ -1,0 +1,42 @@
+# Ambiente virtual
+.venv/
+venv/
+ENV/
+env/
+hefesto/
+
+# Python bytecode e cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Configurações locais
+*.log
+*.sqlite3
+*.db
+.env
+.env.*
+
+# VS Code
+.vscode/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Build / distribuição
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Banco de dados local (se não quiser versionar)
+# hefestostock_database.sql
+
+# Arquivos temporários
+*.tmp
+*.swp
+*.bak
