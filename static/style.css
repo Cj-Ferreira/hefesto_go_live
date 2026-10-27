@@ -150,9 +150,9 @@ img {
 .topbar {
     height: 80px;
     min-height: 80px;
-    background: rgba(255, 255, 255, 0.72);
+    background: linear-gradient(180deg, rgba(123, 13, 13, 0.96) 0%, rgba(93, 10, 10, 0.96) 100%);
     backdrop-filter: blur(6px);
-    border-bottom: 1px solid rgba(124, 20, 20, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -166,7 +166,7 @@ img {
     display: none;
     border: 0;
     background: transparent;
-    color: #7d0d0d;
+    color: #fff;
     font-size: 1.4rem;
     cursor: pointer;
 }
@@ -175,12 +175,13 @@ img {
     display: flex;
     align-items: center;
     gap: 20px;
-    color: #7d0d0d;
+    color: #fff;
     font-size: 1.4rem;
 }
 
+.topbar-right i,
 .topbar-right a {
-    color: #7d0d0d;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -477,7 +478,7 @@ body {
 
 }
 
-.container-pai_login .esqueci_senha:hover {
+.container_pai_login .esqueci_senha:hover {
     font-size: 15px;
     transform: scale(1.0);
 }
@@ -886,14 +887,14 @@ body {
 }
 
 /* IMPORTANTE: remove conflito do Bootstrap */
-.container-pai_envios .perfect-table {
+.container_pai_envios_do_dia .perfect-table {
     width: 100%;
     border-collapse: separate;
     border-spacing: 0 18px;
 }
 
 /* Cor dos th*/
-.container-pai_envios .perfect-table thead th {
+.container_pai_envios_do_dia .perfect-table thead th {
     background: #f3e7e5 !important;
     color: #6d0f0f !important;
     padding: 12px !important;
@@ -902,16 +903,16 @@ body {
     border: none !important;
 }
 
-.container-pai_envios .perfect-table thead th:first-child {
+.container_pai_envios_do_dia .perfect-table thead th:first-child {
     border-top-left-radius: 20px;
 }
 
-.container-pai_envios .perfect-table thead th:last-child {
+.container_pai_envios_do_dia .perfect-table thead th:last-child {
     border-top-right-radius: 20px;
 }
 
 /* define o tamanho dos campos selecionados "td"*/
-.container-pai_envios .perfect-table td {
+.container_pai_envios_do_dia .perfect-table td {
     padding: 0 10px;
     border: none !important;
 }
@@ -920,7 +921,7 @@ body {
 
 
 /* Celulas */
-.container-pai_envios .cell {
+.container_pai_envios_do_dia .cell {
     height: 48px;
     background: #f5eded;
     border-radius: 14px;
@@ -932,29 +933,29 @@ body {
     justify-content: center;
 }
 
-.container-pai_envios .cell.user {
+.container_pai_envios_do_dia .cell.user {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.container-pai_envios .cell.user i {
+.container_pai_envios_do_dia .cell.user i {
     font-size: 23px;
     color: #7D0A0A;
 }
 
 /*card vermelho*/
-.container-pai_envios .icone-card {
+.container_pai_envios_do_dia .icone-card {
     color: white;
     font-size: 55px;
 }
 
-.container-pai_envios .icone-truck {
+.container_pai_envios_do_dia .icone-truck {
     color: #7D0A0A;
     font-size: 40px;
 }
 
-.container-pai_envios .numero-envio {
+.container_pai_envios_do_dia .numero-envio {
     font-size: 40px;
     font-weight: 700;
     color: #7D0A0A;
@@ -962,17 +963,17 @@ body {
 }
 
 /*-------------- card claro------------*/
-.container-pai_envios .titulo-envio {
+.container_pai_envios_do_dia .titulo-envio {
     font-weight: 600;
     color: #3b2a2a;
 }
 
-.container-pai_envios .seta {
+.container_pai_envios_do_dia .seta {
     font-size: 28px;
     color: #7D0A0A;
 }
 
-.container-pai_envios .card-envios-dia {
+.container_pai_envios_do_dia .card-envios-dia {
     background: #f3e7e5;
     border-radius: 20px;
     padding: 20px;
@@ -983,7 +984,7 @@ body {
     transition: 0.3s;
 }
 
-.container-pai_envios .card-envios-dia:hover {
+.container_pai_envios_do_dia .card-envios-dia:hover {
     transform: scale(1.03);
 }
 
@@ -1036,7 +1037,7 @@ body {
     flex-direction: column;
 }
 
-.container-pai_envios_do_dia .cabecalho {
+.container_pai_envios_do_dia .cabecalho {
     height: 75px;
     display: flex;
     align-items: center;
@@ -1045,7 +1046,7 @@ body {
     flex-shrink: 0;
 }
 
-.container-pai_envios_do_dia .cabecalho h1 {
+.container_pai_envios_do_dia .cabecalho h1 {
     color: #7d1715;
     font-size: 26px;
     font-weight: 600;
@@ -1053,18 +1054,18 @@ body {
 }
 
 /* conteúdo */
-.container-pai_envios_do_dia .conteudo {
+.container_pai_envios_do_dia .conteudo {
     padding: 25px 35px;
     flex: 1;
 }
 
 /* espaçamento entre os cards */
-.container-pai_envios_do_dia .row {
+.container_pai_envios_do_dia .row {
     height: 100%;
 }
 
 /* card*/
-.container-pai_envios_do_dia .card-envio {
+.container_pai_envios_do_dia .card-envio {
     background: #fffdfd;
     border: 1px solid #efd9d5;
     border-radius: 16px;
@@ -1426,7 +1427,7 @@ body {
     padding-right: 5px;
 }
 
-.container-pai_rastreio .text-rastreio h3 {
+.container_pai_rastreio .text-rastreio h3 {
     color: #7a1d12;
     margin: 0 0 6px 0;
     font-size: 15px;
@@ -2110,7 +2111,7 @@ body {
     border-left: 4px solid #8fa4b8;
 }
 
-.container-pai_dashboard .card-verde {
+.container_pai_dashboard .card-verde {
     border-left: 4px solid #62a878;
 }
 
@@ -2142,7 +2143,7 @@ body {
     color: #d49b00;
 }
 
-.container-pai_dashboard .bg-cinza {
+.container_pai_dashboard .bg-cinza {
     background: #e1e7ec;
     color: #60758a;
 }
@@ -3390,12 +3391,12 @@ body {
     z-index: 0;
 }
 
-.container-pai_entrada .bolinhas-entrada1 {
+.container_pai_entrada .bolinhas-entrada1 {
     top: 80px;
     right: 100px;
 }
 
-.container-pai_entrada .bolinhas-entrada2 {
+.container_pai_entrada .bolinhas-entrada2 {
     bottom: 80px;
     left: 100px;
 }

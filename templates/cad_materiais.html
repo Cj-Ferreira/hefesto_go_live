@@ -10,6 +10,200 @@
 <link rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
+<style>
+    .card-materia-prima {
+        width: min(1100px, 95%);
+        max-width: 95%;
+        padding: 30px 32px 24px;
+        border-radius: 22px;
+        background: linear-gradient(180deg, #fffdfd 0%, #fff8f7 100%);
+        box-shadow: 0 18px 45px rgba(116, 11, 9, 0.12) !important;
+        border: 1px solid rgba(116, 11, 9, 0.08);
+        margin: 0 auto;
+    }
+
+    .card-materia-prima .cabecalho-materia {
+        margin-bottom: 8px;
+    }
+
+    .card-materia-prima .icone-titulo {
+        font-size: 62px;
+        color: #8b0000;
+        margin-bottom: 12px;
+        display: inline-block;
+    }
+
+    .card-materia-prima h4 {
+        color: #740b09;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+    }
+
+    .card-materia-prima .texto-descricao {
+        color: #6b7280;
+        font-size: 0.98rem;
+    }
+
+    .card-materia-prima .form-materia-grid {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 24px;
+        align-items: start;
+        margin-top: 8px;
+    }
+
+    .card-materia-prima .coluna-materia {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .card-materia-prima .titulo-secao {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 1rem;
+        padding: 0;
+        border-radius: 0;
+        background: transparent;
+        color: #740b09;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        border-left: none;
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .card-materia-prima .input-group {
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: none;
+        border: 1px solid rgba(116, 11, 9, 0.12);
+    }
+
+    .card-materia-prima .input-group input,
+    .card-materia-prima .input-group textarea,
+    .card-materia-prima .form-control,
+    .card-materia-prima textarea {
+        background-color: #f9f1f1;
+        border: 1px solid rgba(116, 11, 9, 0.15);
+        border-left: none;
+        color: #2c2c2c;
+        border-radius: 0 12px 12px 0;
+        box-shadow: none;
+    }
+
+    .card-materia-prima .input-group-text {
+        background-color: #fae8e6;
+        border-color: rgba(116, 11, 9, 0.22);
+        color: #740b09;
+        border-right: none;
+        min-width: 44px;
+        justify-content: center;
+        border-radius: 12px 0 0 12px;
+        box-shadow: none;
+    }
+
+    .card-materia-prima .campo-descricao {
+        min-height: 120px;
+        resize: vertical;
+        border-radius: 12px;
+        padding: 12px 14px;
+    }
+
+    .card-materia-prima .materia-detalhes-row {
+        align-items: stretch;
+    }
+
+    .card-materia-prima .materia-status-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 100%;
+        gap: 6px;
+    }
+
+    .card-materia-prima .status-material {
+        display: flex;
+        align-items: center;
+        flex: 0 0 auto;
+        min-height: 72px;
+        padding: 10px 12px;
+        border-radius: 12px;
+        background: rgba(116, 11, 9, 0.02);
+        border: 1px solid rgba(116, 11, 9, 0.08);
+        margin-bottom: 0;
+    }
+
+    .card-materia-prima .status-material .form-check {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 0;
+    }
+
+    .card-materia-prima .status-material .form-check-input {
+        margin-top: 0;
+        transform: scale(1.05);
+    }
+
+    .card-materia-prima .status-material .texto-status {
+        margin-top: 4px;
+        color: #5f6368;
+        font-size: 0.75rem;
+        line-height: 1.4;
+        display: block;
+    }
+
+    .card-materia-prima .acoes-formulario {
+        display: flex;
+        justify-content: center;
+        margin-top: 0;
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .card-materia-prima .btn-login {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 46px;
+        background: linear-gradient(135deg, #740b09, #8d1412);
+        border: none;
+        border-radius: 12px;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        padding: 10px 20px;
+        box-shadow: 0 10px 20px rgba(116, 11, 9, 0.18);
+        transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+    }
+
+    .card-materia-prima .btn-login:hover {
+        opacity: 0.97;
+        transform: translateY(-2px);
+        box-shadow: 0 14px 22px rgba(116, 11, 9, 0.22);
+    }
+
+    .card-materia-prima .btn-login:active {
+        transform: translateY(0);
+        box-shadow: 0 6px 14px rgba(116, 11, 9, 0.18);
+    }
+
+    .card-materia-prima .btn-login:focus-visible {
+        outline: 3px solid rgba(116, 11, 9, 0.18);
+        outline-offset: 2px;
+    }
+
+    @media (max-width: 991px) {
+        .card-materia-prima .form-materia-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
 <div class="container-pai">
     <div class="bolinhas bolinhas1"></div>
     <div class="bolinhas bolinhas2"></div>
@@ -44,343 +238,307 @@
                   action="{{ url_for('material_incluir') }}"
                   id="card-cad_materiais">
 
-                <!-- Informações principais -->
-                <section class="mb-4">
-                    <h5 class="titulo-secao">
-                        <i class="bi bi-info-circle me-2"
-                           aria-hidden="true"></i>
-                        Informações gerais
-                    </h5>
+                <div class="form-materia-grid">
+                    <div class="coluna-materia coluna-materia-esq">
+                        <!-- Informações principais -->
+                        <section class="mb-4">
+                            <h5 class="titulo-secao">
+                                <i class="bi bi-info-circle me-2"
+                                   aria-hidden="true"></i>
+                                Informações Gerais
+                            </h5>
 
-                    <div class="row g-3">
+                            <div class="row g-3">
 
-                        <!-- Nome -->
-                        <div class="col-md-6">
-                            <label for="nome_materia_prima"
-                                   class="form-label">
-                                Nome <span class="campo-obrigatorio">*</span>
-                            </label>
+                                <!-- Nome -->
+                                <div class="col-md-6">
+                                    <label for="nome_materia_prima"
+                                           class="form-label">
+                                        Nome <span class="campo-obrigatorio">*</span>
+                                    </label>
 
-                            <div class="input-group">
-                                <span class="input-group-text">
-                                    <i class="bi bi-box"
-                                       aria-hidden="true"></i>
-                                </span>
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <i class="bi bi-box"
+                                               aria-hidden="true"></i>
+                                        </span>
 
-                                <input type="text"
-                                       name="nome_materia_prima"
-                                       id="nome_materia_prima"
-                                       class="form-control"
-                                       placeholder="Nome da matéria-prima"
-                                       maxlength="100"
-                                       required>
+                                        <input type="text"
+                                               name="nome_materia_prima"
+                                               id="nome_materia_prima"
+                                               class="form-control"
+                                               placeholder="Nome da matéria-prima"
+                                               maxlength="100"
+                                               required>
+                                    </div>
+                                </div>
+
+                                <!-- Fornecedor -->
+                                <div class="col-md-6">
+                                    <label for="fornecedor_materia_prima"
+                                           class="form-label">
+                                        Fornecedor
+                                        <span class="campo-obrigatorio">*</span>
+                                    </label>
+
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <i class="bi bi-truck"
+                                               aria-hidden="true"></i>
+                                        </span>
+
+                                        <input type="text"
+                                               name="fornecedor_materia_prima"
+                                               id="fornecedor_materia_prima"
+                                               class="form-control"
+                                               placeholder="Nome do fornecedor"
+                                               maxlength="150"
+                                               required>
+                                    </div>
+                                </div>
+
                             </div>
-                        </div>
+                        </section>
 
-                        <!-- Quantidade cadastrada -->
-                        <div class="col-md-6">
-                            <label for="quantidade_materia_prima"
-                                   class="form-label">
-                                Quantidade cadastrada
-                                <span class="campo-obrigatorio">*</span>
-                            </label>
+                        <!-- Localização física -->
+                        <section class="mb-4">
+                            <h5 class="titulo-secao">
+                                <i class="bi bi-geo-alt me-2"
+                                   aria-hidden="true"></i>
+                                Localização do Barracão
+                            </h5>
 
-                            <div class="input-group">
-                                <span class="input-group-text">
-                                    <i class="bi bi-123"
-                                       aria-hidden="true"></i>
-                                </span>
+                            <div class="row g-3">
 
-                                <input type="number"
-                                       name="quantidade_materia_prima"
-                                       id="quantidade_materia_prima"
-                                       class="form-control"
-                                       placeholder="Quantidade inicial"
-                                       min="0"
-                                       step="1"
-                                       required>
+                                <div class="col-md-4">
+                                    <label for="numero_barracao"
+                                           class="form-label">
+                                        Número
+                                    </label>
+
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <i class="bi bi-houses"
+                                               aria-hidden="true"></i>
+                                        </span>
+
+                                        <input type="text"
+                                               name="numero_barracao"
+                                               id="numero_barracao"
+                                               class="form-control"
+                                               placeholder="Ex.: 12"
+                                               maxlength="20">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="andar_barracao"
+                                           class="form-label">
+                                        Andar
+                                    </label>
+
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <i class="bi bi-building"
+                                               aria-hidden="true"></i>
+                                        </span>
+
+                                        <input type="text"
+                                               name="andar_barracao"
+                                               id="andar_barracao"
+                                               class="form-control"
+                                               placeholder="Ex.: 1º andar"
+                                               maxlength="30">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="rua_barracao"
+                                           class="form-label">
+                                        Rua / corredor
+                                    </label>
+
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <i class="bi bi-signpost-2"
+                                               aria-hidden="true"></i>
+                                        </span>
+
+                                        <input type="text"
+                                               name="rua_barracao"
+                                               id="rua_barracao"
+                                               class="form-control"
+                                               placeholder="Ex.: Rua B"
+                                               maxlength="100">
+                                    </div>
+                                </div>
+
                             </div>
-                        </div>
-
-                        <!-- Tipo -->
-                        <div class="col-md-6">
-                            <label for="tipo_materia_prima"
-                                   class="form-label">
-                                Tipo <span class="campo-obrigatorio">*</span>
-                            </label>
-
-                            <div class="input-group">
-                                <span class="input-group-text">
-                                    <i class="bi bi-tags"
-                                       aria-hidden="true"></i>
-                                </span>
-
-                                <input type="text"
-                                       name="tipo_materia_prima"
-                                       id="tipo_materia_prima"
-                                       class="form-control"
-                                       placeholder="Ex.: papel, embalagem, insumo"
-                                       maxlength="100"
-                                       required>
-                            </div>
-                        </div>
-
-                        <!-- Fornecedor -->
-                        <div class="col-md-6">
-                            <label for="fornecedor_materia_prima"
-                                   class="form-label">
-                                Fornecedor
-                                <span class="campo-obrigatorio">*</span>
-                            </label>
-
-                            <div class="input-group">
-                                <span class="input-group-text">
-                                    <i class="bi bi-truck"
-                                       aria-hidden="true"></i>
-                                </span>
-
-                                <input type="text"
-                                       name="fornecedor_materia_prima"
-                                       id="fornecedor_materia_prima"
-                                       class="form-control"
-                                       placeholder="Nome do fornecedor"
-                                       maxlength="150"
-                                       required>
-                            </div>
-                        </div>
-
+                        </section>
                     </div>
-                </section>
 
-                <!-- Controle de estoque -->
-                <section class="mb-4">
-                    <h5 class="titulo-secao">
-                        <i class="bi bi-clipboard-data me-2"
-                           aria-hidden="true"></i>
-                        Controle de estoque
-                    </h5>
+                    <div class="coluna-materia coluna-materia-dir">
+                        <!-- Controle de estoque -->
+                        <section class="mb-4">
+                            <h5 class="titulo-secao">
+                                <i class="bi bi-clipboard-data me-2"
+                                   aria-hidden="true"></i>
+                                Controle de Estoque
+                            </h5>
 
-                    <div class="row g-3">
+                            <div class="row g-3">
 
-                        <!-- Estoque atual -->
-                        <div class="col-md-6">
-                            <label for="estoque_materia_prima"
-                                   class="form-label">
-                                Estoque atual
-                            </label>
+                                <!-- Estoque atual -->
+                                <div class="col-md-6">
+                                    <label for="estoque_materia_prima"
+                                           class="form-label">
+                                        Estoque atual
+                                    </label>
 
-                            <div class="input-group">
-                                <span class="input-group-text">
-                                    <i class="bi bi-boxes"
-                                       aria-hidden="true"></i>
-                                </span>
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <i class="bi bi-boxes"
+                                               aria-hidden="true"></i>
+                                        </span>
 
-                                <input type="number"
-                                       name="estoque_materia_prima"
-                                       id="estoque_materia_prima"
-                                       class="form-control"
-                                       placeholder="Quantidade disponível"
-                                       min="0"
-                                       step="1">
+                                        <input type="number"
+                                               name="estoque_materia_prima"
+                                               id="estoque_materia_prima"
+                                               class="form-control"
+                                               placeholder="Quantidade disponível"
+                                               min="0"
+                                               step="1">
+                                    </div>
+
+                                    <small class="form-text">
+                                        Quantidade disponível no barracão.
+                                    </small>
+                                </div>
+
+                                <!-- Estoque mínimo -->
+                                <div class="col-md-6">
+                                    <label for="estoque_minimo_materia_prima"
+                                           class="form-label">
+                                        Estoque mínimo
+                                    </label>
+
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <i class="bi bi-exclamation-triangle"
+                                               aria-hidden="true"></i>
+                                        </span>
+
+                                        <input type="number"
+                                               name="estoque_minimo_materia_prima"
+                                               id="estoque_minimo_materia_prima"
+                                               class="form-control"
+                                               placeholder="Limite mínimo"
+                                               min="0"
+                                               step="1">
+                                    </div>
+
+                                    <small class="form-text">
+                                        Referência para reposição de materiais.
+                                    </small>
+                                </div>
+
+                                <!-- Validade -->
+                                <div class="col-md-6">
+                                    <label for="data_validade_materia_prima"
+                                           class="form-label">
+                                        Data de validade
+                                    </label>
+
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <i class="bi bi-calendar-event"
+                                               aria-hidden="true"></i>
+                                        </span>
+
+                                        <input type="date"
+                                               name="data_validade_materia_prima"
+                                               id="data_validade_materia_prima"
+                                               class="form-control">
+                                    </div>
+                                </div>
+
+                                <!-- Última reposição -->
+                                <div class="col-md-6">
+                                    <label for="data_ultima_reposicao"
+                                           class="form-label">
+                                        Data da última reposição
+                                    </label>
+
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <i class="bi bi-calendar-check"
+                                               aria-hidden="true"></i>
+                                        </span>
+
+                                        <input type="date"
+                                               name="data_ultima_reposicao"
+                                               id="data_ultima_reposicao"
+                                               class="form-control">
+                                    </div>
+                                </div>
+
                             </div>
-
-                            <small class="form-text">
-                                Quantidade disponível no barracão.
-                            </small>
-                        </div>
-
-                        <!-- Estoque mínimo -->
-                        <div class="col-md-6">
-                            <label for="estoque_minimo_materia_prima"
-                                   class="form-label">
-                                Estoque mínimo
-                            </label>
-
-                            <div class="input-group">
-                                <span class="input-group-text">
-                                    <i class="bi bi-exclamation-triangle"
-                                       aria-hidden="true"></i>
-                                </span>
-
-                                <input type="number"
-                                       name="estoque_minimo_materia_prima"
-                                       id="estoque_minimo_materia_prima"
-                                       class="form-control"
-                                       placeholder="Limite mínimo"
-                                       min="0"
-                                       step="1">
-                            </div>
-
-                            <small class="form-text">
-                                Referência para reposição de materiais.
-                            </small>
-                        </div>
-
-                        <!-- Validade -->
-                        <div class="col-md-6">
-                            <label for="data_validade_materia_prima"
-                                   class="form-label">
-                                Data de validade
-                            </label>
-
-                            <div class="input-group">
-                                <span class="input-group-text">
-                                    <i class="bi bi-calendar-event"
-                                       aria-hidden="true"></i>
-                                </span>
-
-                                <input type="date"
-                                       name="data_validade_materia_prima"
-                                       id="data_validade_materia_prima"
-                                       class="form-control">
-                            </div>
-                        </div>
-
-                        <!-- Última reposição -->
-                        <div class="col-md-6">
-                            <label for="data_ultima_reposicao"
-                                   class="form-label">
-                                Data da última reposição
-                            </label>
-
-                            <div class="input-group">
-                                <span class="input-group-text">
-                                    <i class="bi bi-calendar-check"
-                                       aria-hidden="true"></i>
-                                </span>
-
-                                <input type="date"
-                                       name="data_ultima_reposicao"
-                                       id="data_ultima_reposicao"
-                                       class="form-control">
-                            </div>
-                        </div>
-
+                        </section>
                     </div>
-                </section>
+                </div>
 
-                <!-- Localização física -->
-                <section class="mb-4">
-                    <h5 class="titulo-secao">
-                        <i class="bi bi-geo-alt me-2"
-                           aria-hidden="true"></i>
-                        Localização no barracão
-                    </h5>
-
-                    <div class="row g-3">
-
-                        <div class="col-md-4">
-                            <label for="numero_barracao"
+                <!-- Descrição e status -->
+                <div class="row g-3 align-items-end materia-detalhes-row">
+                    <div class="col-md-8">
+                        <section class="mb-4">
+                            <label for="descricao_materia_prima"
                                    class="form-label">
-                                Número
+                                <i class="bi bi-card-text me-1"
+                                   aria-hidden="true"></i>
+                                Descrição
                             </label>
 
-                            <div class="input-group">
-                                <span class="input-group-text">
-                                    <i class="bi bi-houses"
-                                       aria-hidden="true"></i>
-                                </span>
-
-                                <input type="text"
-                                       name="numero_barracao"
-                                       id="numero_barracao"
-                                       class="form-control"
-                                       placeholder="Ex.: 12"
-                                       maxlength="20">
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <label for="andar_barracao"
-                                   class="form-label">
-                                Andar
-                            </label>
-
-                            <div class="input-group">
-                                <span class="input-group-text">
-                                    <i class="bi bi-building"
-                                       aria-hidden="true"></i>
-                                </span>
-
-                                <input type="text"
-                                       name="andar_barracao"
-                                       id="andar_barracao"
-                                       class="form-control"
-                                       placeholder="Ex.: 1º andar"
-                                       maxlength="30">
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <label for="rua_barracao"
-                                   class="form-label">
-                                Rua / corredor
-                            </label>
-
-                            <div class="input-group">
-                                <span class="input-group-text">
-                                    <i class="bi bi-signpost-2"
-                                       aria-hidden="true"></i>
-                                </span>
-
-                                <input type="text"
-                                       name="rua_barracao"
-                                       id="rua_barracao"
-                                       class="form-control"
-                                       placeholder="Ex.: Rua B"
-                                       maxlength="100">
-                            </div>
-                        </div>
-
+                            <textarea name="descricao_materia_prima"
+                                      id="descricao_materia_prima"
+                                      class="form-control campo-descricao"
+                                      rows="4"
+                                      maxlength="1000"
+                                      placeholder="Adicione características, especificações ou observações sobre o material..."></textarea>
+                        </section>
                     </div>
-                </section>
 
-                <!-- Descrição -->
-                <section class="mb-4">
-                    <label for="descricao_materia_prima"
-                           class="form-label">
-                        <i class="bi bi-card-text me-1"
-                           aria-hidden="true"></i>
-                        Descrição
-                    </label>
+                    <div class="col-md-4">
+                        <div class="materia-status-col">
+                            <section class="status-material mb-4 h-100">
+                                <div class="form-check form-switch d-flex align-items-center h-100">
+                                    <input class="form-check-input"
+                                           type="checkbox"
+                                           role="switch"
+                                           name="ativado_materia_prima"
+                                           id="ativado_materia_prima"
+                                           value="1"
+                                           checked>
 
-                    <textarea name="descricao_materia_prima"
-                              id="descricao_materia_prima"
-                              class="form-control campo-descricao"
-                              rows="4"
-                              maxlength="1000"
-                              placeholder="Adicione características, especificações ou observações sobre o material..."></textarea>
-                </section>
+                                    <label class="form-check-label"
+                                           for="ativado_materia_prima">
+                                        <strong>Material ativo</strong>
+                                        <small class="d-block texto-status">
+                                            Material disponível para uso no estoque.
+                                        </small>
+                                    </label>
+                                </div>
+                            </section>
 
-                <!-- Situação do material -->
-                <section class="status-material mb-4">
-                    <div class="form-check form-switch">
-                        <input class="form-check-input"
-                               type="checkbox"
-                               role="switch"
-                               name="ativado_materia_prima"
-                               id="ativado_materia_prima"
-                               value="1"
-                               checked>
-
-                        <label class="form-check-label"
-                               for="ativado_materia_prima">
-                            <strong>Material ativo</strong>
-                            <span class="d-block texto-status">
-                                Material disponível para uso no estoque.
-                            </span>
-                        </label>
+                            <div class="acoes-formulario mt-0">
+                                <button type="submit"
+                                        class="btn btn-login text-white w-100">
+                                    <i class="bi bi-floppy me-2"
+                                       aria-hidden="true"></i>
+                                    Cadastrar Matéria-Prima
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                </section>
-
-                <!-- Botões -->
-                <div class="acoes-formulario">
-                    <button type="submit"
-                            class="btn btn-login text-white">
-                        <i class="bi bi-floppy me-2"
-                           aria-hidden="true"></i>
-                        Cadastrar matéria-prima
-                    </button>
                 </div>
 
             </form>
